@@ -12,3 +12,5 @@ The main advantage of Dependency Injection within projects is,
 
 3) Testing through Mock or similar processes makes unit testing possible on large scale projects.
 
+
+![](Capture.PNG)
