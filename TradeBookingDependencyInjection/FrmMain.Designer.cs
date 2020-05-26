@@ -45,6 +45,8 @@
             this.btnBookTrade = new System.Windows.Forms.Button();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.lblSwapID = new System.Windows.Forms.Label();
+            this.lblNotional = new System.Windows.Forms.Label();
+            this.txtNotional = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cboCurrency
@@ -129,7 +131,7 @@
             // lblMaturity
             // 
             this.lblMaturity.AutoSize = true;
-            this.lblMaturity.Location = new System.Drawing.Point(314, 197);
+            this.lblMaturity.Location = new System.Drawing.Point(313, 198);
             this.lblMaturity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaturity.Name = "lblMaturity";
             this.lblMaturity.Size = new System.Drawing.Size(50, 15);
@@ -139,7 +141,7 @@
             // txtMaturity
             // 
             this.txtMaturity.BackColor = System.Drawing.SystemColors.Info;
-            this.txtMaturity.Location = new System.Drawing.Point(389, 197);
+            this.txtMaturity.Location = new System.Drawing.Point(388, 198);
             this.txtMaturity.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaturity.Name = "txtMaturity";
             this.txtMaturity.Size = new System.Drawing.Size(127, 20);
@@ -148,7 +150,7 @@
             // lblFixedRate
             // 
             this.lblFixedRate.AutoSize = true;
-            this.lblFixedRate.Location = new System.Drawing.Point(313, 219);
+            this.lblFixedRate.Location = new System.Drawing.Point(313, 222);
             this.lblFixedRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFixedRate.Name = "lblFixedRate";
             this.lblFixedRate.Size = new System.Drawing.Size(66, 15);
@@ -158,7 +160,7 @@
             // txtFixedRate
             // 
             this.txtFixedRate.BackColor = System.Drawing.SystemColors.Info;
-            this.txtFixedRate.Location = new System.Drawing.Point(388, 219);
+            this.txtFixedRate.Location = new System.Drawing.Point(388, 222);
             this.txtFixedRate.Margin = new System.Windows.Forms.Padding(2);
             this.txtFixedRate.Name = "txtFixedRate";
             this.txtFixedRate.Size = new System.Drawing.Size(127, 20);
@@ -198,7 +200,7 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMessage.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtMessage.Location = new System.Drawing.Point(66, 71);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
@@ -213,12 +215,33 @@
             this.lblSwapID.Size = new System.Drawing.Size(0, 15);
             this.lblSwapID.TabIndex = 17;
             // 
+            // lblNotional
+            // 
+            this.lblNotional.AutoSize = true;
+            this.lblNotional.Location = new System.Drawing.Point(313, 150);
+            this.lblNotional.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNotional.Name = "lblNotional";
+            this.lblNotional.Size = new System.Drawing.Size(53, 15);
+            this.lblNotional.TabIndex = 19;
+            this.lblNotional.Text = "Notional";
+            // 
+            // txtNotional
+            // 
+            this.txtNotional.BackColor = System.Drawing.SystemColors.Info;
+            this.txtNotional.Location = new System.Drawing.Point(388, 150);
+            this.txtNotional.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNotional.Name = "txtNotional";
+            this.txtNotional.Size = new System.Drawing.Size(127, 20);
+            this.txtNotional.TabIndex = 18;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(589, 327);
+            this.Controls.Add(this.lblNotional);
+            this.Controls.Add(this.txtNotional);
             this.Controls.Add(this.lblSwapID);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.btnBookTrade);
@@ -266,6 +289,8 @@
         private System.Windows.Forms.Button btnBookTrade;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Label lblSwapID;
+        private System.Windows.Forms.Label lblNotional;
+        private System.Windows.Forms.TextBox txtNotional;
     }
 }
 

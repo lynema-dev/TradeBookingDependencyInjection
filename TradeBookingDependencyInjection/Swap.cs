@@ -15,6 +15,7 @@ namespace TradeBookingDependencyInjection
         public DateTime effectivedate { get; set; }
         public DateTime maturitydate { get; set; }
         public Double fixedrate { get; set; }
+        public Double notional { get; set; }
         public int swapidentifier { get; set; }
 
     }

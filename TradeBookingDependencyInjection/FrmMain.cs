@@ -34,6 +34,8 @@ namespace TradeBookingDependencyInjection
             this.cboSwapDirection.Items.Add("Pay");
             this.cboSwapDirection.Items.Add("Rec");
 
+            this.cboPortfolio.Select();
+
         }
 
         public static new readonly IServiceProvider Container = new ContainerBuilder().Build();
@@ -52,13 +54,14 @@ namespace TradeBookingDependencyInjection
                 swap.portfolio = this.cboPortfolio.SelectedItem.ToString();
                 swap.swaptype = this.cboSwapType.SelectedItem.ToString();
                 swap.direction = this.cboSwapDirection.SelectedItem.ToString();
+                swap.notional = Convert.ToDouble(this.txtNotional.Text);
                 swap.effectivedate = Convert.ToDateTime(this.txtEffective.Text);
                 swap.maturitydate = Convert.ToDateTime(this.txtMaturity.Text);
                 swap.fixedrate = Convert.ToDouble(this.txtFixedRate.Text);
 
                 var tradeprocessor = Container.GetService<ITradeProcessor>();
                 tradeprocessor.submitTrade(swap, out returnmessage);
-                this.txtMessage.Text = returnmessage;
+                this.txtMessage.Text = Environment.NewLine + returnmessage;
 
                 this.lblSwapID.Text = @"Swap ID :" + swap.swapidentifier;
 
